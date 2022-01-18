@@ -70,7 +70,7 @@ python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./stats \
 
 
 *__You can also implement our codes in 'Jupyter Notebook' that has more degree of freedom.
-Use the 'notebook.ipynb file.__*
+Use the 'notebook.ipynb' file.__*
 
 
 ## Detection results for 50K samples
