@@ -64,8 +64,7 @@ optional arguments:
 ```sh
 python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./stats \
                --model stylegan2 --dataset ffhq --resolution 1024 --weight_path ./ \
-               --detection True --correction True
-               
+               --detection True --correction True      
 ```
 
 *__If you are on remote server, then to show the results, you should do the following. (X11 forwarding).__*
