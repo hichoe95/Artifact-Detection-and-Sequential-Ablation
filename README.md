@@ -63,8 +63,8 @@ python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./ \
                
 ```
 
-## Detection results for 10K samples
+## Detection results for 50K samples
 
-![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/4.png?raw=true)
+![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/norm.png?raw=true)
 
-![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/5.png?raw=true)
+![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/arti.png?raw=true)
