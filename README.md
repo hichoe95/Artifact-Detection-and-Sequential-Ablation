@@ -6,7 +6,7 @@
 This repo provides the official PyTorch implementation of the following paper:
 
 > **Can We Find Neurons that Cause Unrealistic Images in Deep Generative Networks?**  
-> [Hwanil Choi](https://github.com/hichoe95), Wonjoon Chang, Jaesik Choi  
+> [Hwanil Choi](https://github.com/hichoe95), Wonjoon Chang, Jaesik Choi*  
 > Korea Advanced Institute of Science and Technology, **KAIST**  
 >
   
