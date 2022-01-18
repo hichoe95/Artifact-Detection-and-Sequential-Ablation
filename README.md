@@ -1,4 +1,5 @@
-# Artifact-Detection-and-Sequential-Ablation - Offiial Pytorch Implementation
+# Artifact Detection/Correction - Offiial Pytorch Implementation
+
 
 
 This repo provides the official PyTorch implementation of the following paper:
