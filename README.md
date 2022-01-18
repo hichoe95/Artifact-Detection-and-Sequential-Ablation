@@ -62,3 +62,9 @@ python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./ \
                --detection True --correction True
                
 ```
+
+## Detection results
+
+![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/4.png?raw=true)
+
+![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/5.png?raw=true)
