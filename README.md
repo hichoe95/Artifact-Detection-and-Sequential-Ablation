@@ -21,7 +21,7 @@ This repo provides the official PyTorch implementation of the following paper:
 
 
 ## Pre-Trained Models (Official) - [GenForce](https://github.com/genforce/genforce)
-|pre-trained\model| PGGAN | StyleGAN2 |
+|Dataset \ Model| PGGAN | StyleGAN2 |
 |:---:|:---:|:---:|
 |CelebA-HQ| [1024 x 1024](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155082926_link_cuhk_edu_hk/EW_3jQ6E7xlKvCSHYrbmkQQBAB8tgIv5W5evdT6-GuXiWw?e=gRifVa&download=1)| X |
 |FFHQ| X | [1024 X 1024](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155082926_link_cuhk_edu_hk/EX0DNWiBvl5FuOQTF4oMPBYBNSalcxTK0AbLwBn9Y3vfgg?e=Q0sZit&download=1) |
