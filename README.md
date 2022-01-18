@@ -66,7 +66,7 @@ python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./stats \
 ```
 
 *__If you are on remote server, then to show the results, you should do the following. (X11 forwarding).__*
-- [X11 forwarding](https://kb.iu.edu/d/bdnt)
+- [X11 forwarding](https://kb.iu.edu/d/bdnt)  
 *__You can also implement our codes in 'Jupyter Notebook' that has more degree of freedom.
 Use the 'notebook.ipynb file.__*
 
