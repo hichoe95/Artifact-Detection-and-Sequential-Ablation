@@ -33,6 +33,7 @@ More pre-trained weights are available in [genforce-model-zoo](https://github.co
 
 ## Implementation
 
+- **Options
 ```sh
 optional arguments:
   -h, --help                show this help message and exit
@@ -56,6 +57,7 @@ optional arguments:
 
 ```
 
+- **Usage
 ```sh
 python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./ \
                --model stylegan2 --dataset ffhq --resolution 1024 --weight_path ./ \
