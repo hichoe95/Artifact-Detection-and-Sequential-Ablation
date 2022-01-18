@@ -31,4 +31,34 @@ This repo provides the official PyTorch implementation of the following paper:
 More pre-trained weights are available in [genforce-model-zoo](https://github.com/genforce/genforce/blob/master/MODEL_ZOO.md)
 
 
-## Download pre
+## Implementation
+
+```sh
+optional arguments:
+  -h, --help                show this help message and exit
+  --gpu GPU                 gpu index numper
+  --batch_size BATCH_SIZE
+                            batch size for pre processing and generating process
+  --sample_size SAMPLE_SIZE
+                            sample size for statistics
+  --freq_path FREQ_PATH
+                            loading saved frequencies of neurons
+  --model MODEL             pggan, styelgan2
+  --dataset DATASET         ffhq, cat, church, etc
+  --resolution RESOLUTION
+                            dataset resolution
+  --weight_path WEIGHT_PATH
+                            pre-trained weight path
+  --detection DETECTION
+                            implement normal/artifact detection
+  --correction CORRECTION
+                            implement correction task
+
+```
+
+```sh
+python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./ \
+               --model stylegan2 --dataset ffhq --resolution 1024 --weight_path ./ \
+               --detection True --correction True
+               
+```
