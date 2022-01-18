@@ -1,6 +1,6 @@
 # Artifact Detection/Correction - Offiial Pytorch Implementation
 
-![]()
+![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/Screen%20Shot%202022-01-18%20at%202.48.49%20PM.png?raw=true)
 
 This repo provides the official PyTorch implementation of the following paper:
 
