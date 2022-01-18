@@ -25,8 +25,13 @@ def main(args):
 	sq = sequential_ablation(G, device, args)
 
 	if args.correction:
-		original_image, repaired_image = sq.seq_abl(sample_idx = [123], layer_idx= [0,1,3], rate = '30', under = True)
-		print_two_images(original_image, repaired_image, labels = ['origin', 'corrected'])
+		original_image, repaired_image, mask_idx = sq.seq_abl(sample_idx = [1,34,123,341], layer_idx= [0,1,3], rate = '30', under = True)
+		masks = []
+		for i in range(len(mask_idx)):
+		    masks.append(image_mask(layer_idx = [0,1,3], act_idx = mask_idx[i], resolution = args.resolution, model = args.model))
+		for i in range(original_image.size(0)):
+	    	print_two_images(original_image[[i]], repaired_image[[i]], masks[i], labels = ['origin', 'corrected'])
+	
 
 	if args.detection:
 		norm, arti = sq.arti_detection([0,1,3], sample_num = 15000, topn = 60)
