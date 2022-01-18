@@ -20,7 +20,15 @@ This repo provides the official PyTorch implementation of the following paper:
 - cudnn 7.6.3
 
 
-## Network Architecture
+## Pre-Trained Models - [GenForce](https://github.com/genforce/genforce)
+|pre-trained\model| PGGAN | StyleGAN2 |
+|:---:|:---:|:---:|
+|CelebA-HQ|1024 x 1024| X |
+|FFHQ| X | 1024 X 1024 |
+|LSUN-Church| 256 x 256| 256 x 256|
+|LSUN-CAT|256 x 256 | 256 x 256 |
+
+More pre-trained weights are available in [genforce-model-zoo](https://github.com/genforce/genforce/blob/master/MODEL_ZOO.md)
 
 
 ## Download pre
