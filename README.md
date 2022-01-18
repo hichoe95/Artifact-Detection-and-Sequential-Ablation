@@ -29,7 +29,7 @@ This repo provides the official PyTorch implementation of the following paper:
 |LSUN-CAT|[256 x 256](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155082926_link_cuhk_edu_hk/EQdveyUNOMtAue52n6BxoHoB6Yup5-PTvBDmyfUn7Un4Hw?e=7acGbT&download=1) | [256 x 256](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155082926_link_cuhk_edu_hk/EUKXeBwUUbZJr6kup7PW4ekBx2-vmTp8FjcGb10v8bgJxQ?e=nkerMF&download=1) |
 
 *More pre-trained weights are available in [genforce-model-zoo](https://github.com/genforce/genforce/blob/master/MODEL_ZOO.md)*
-
+- optional : [StyleGAN3](https://github.com/NVlabs/stylegan3)
 
 ## Implementation
 
