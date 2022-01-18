@@ -34,15 +34,32 @@ class sequential_ablation(object):
 	# sequential ablation for given latent codes.
 	@torch.no_grad()
 	def seq_abl(self, sample_idx : list, layer_idx : list, rate = '30', under = True):
+
+		assert len(sample_idx) <= self.batch_size, "len(sample_idx) is lower than batch_size"
+
 		if under:
 			r_indice = [index[rate] for index in self.r_indices_.values()]
 		else:
 			r_indice = [index[rate] for index in self.r_indices.values()]
 
+		act_idx = []
+		sep = []
+
 		def hook_function(index):
 			def fn(_, __, o):
-					o = o.view(o.size(0), -1) if self.model == 'pggan' else o[0].view(o[0].size(0), -1)
-					o[:,index] = torch.where(o[:, index] > 0, torch.tensor(0.).to(self.device), o[:, index])
+				nonlocal act_idx
+
+				o = o.view(o.size(0), -1) if self.model == 'pggan' else o[0].view(o[0].size(0), -1)
+
+				# for heatmap
+				mask = o[:,index].detach().cpu() > 0
+				idx_expand = torch.tensor(index).expand(len(sample_idx),-1)
+				act_idx.append(idx_expand[mask])
+				sep.append(mask.numpy().sum(axis = 1).cumsum())
+
+				# ablation
+				o[:,index] = torch.where(o[:, index] > 0, torch.tensor(0.).to(self.device), o[:, index])
+
 			return fn
 
 		hook = [getattr(self.G if self.model == 'pggan' else self.G.synthesis, 'layer' + str(layer)).register_forward_hook(hook_function(index)) \
@@ -55,7 +72,18 @@ class sequential_ablation(object):
 
 		original_image = self.G(self.latents[sample_idx].to(self.device))['image'].detach().cpu()
 
-		return original_image, repaired_image
+		mask_idx = []
+
+		for sample in range(len(sample_idx)):
+			temp = []
+			for layer in range(len(layer_idx)):
+				if sample == 0:
+					temp.append(act_idx[layer][0 : sep[layer][sample]])
+				else:
+					temp.append(act_idx[layer][sep[layer][sample - 1] : sep[layer][sample]])
+			mask_idx.append(temp)
+
+		return original_image, repaired_image, mask_idx
 
 
 
