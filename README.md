@@ -72,3 +72,6 @@ python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./ \
 
 ### Top 60 images
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/arti.png?raw=true)
+
+## Correction results
+
