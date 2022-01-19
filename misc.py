@@ -61,12 +61,17 @@ def print_two_images(image1, image2, mask, labels, figsize = (18, 5)):
 
 def print_images(images, title, sample_num = 60):
 
-	gs = gridspec.GridSpec(6, 10, wspace = 0., hspace = 0.0)
-	plt.figure(figsize = (10 * 4.87, 6*5))
+	assert sample_num % 10 == 0, "sample_num % 10 == 0"
+
+	row = sample_num // 10
+	col = 10
+
+	gs = gridspec.GridSpec(row, col, wspace = 0., hspace = 0.0)
+	plt.figure(figsize = (col * 4.87, row*5))
 	plt.tight_layout()
 
-	for i in range(6):
-		for j in range(10):
+	for i in range(row):
+		for j in range(col):
 			plt.subplot(gs[i, j])
 			plt.imshow(minmax(images[i*10 + j]))
 			plt.axis('off')
