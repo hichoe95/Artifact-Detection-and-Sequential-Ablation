@@ -14,11 +14,14 @@ class sequential_ablation(object):
 
 		self.model = args.model
 		self.sample_size = args.sample_size
+
+		# random sampling latent z
 		self.latents = torch.randn((self.sample_size, 512))
 
 		self.batch_size = args.batch_size
 		self.layers = [0, 1, 3, 5] if self.model == 'stylegan2' else [1, 3, 5, 7]
 
+		# if you have saved .npy file, then it will load it. Otherwise, it should be calculated.
 		if args.freq_path != "":
 			self.neurons_freq = {f'layer{i:d}' : np.load(os.path.join(args.freq_path,f'rate_layer{i:d}_{args.dataset}_{args.model}.npy')) for i in self.layers}
 			print("Frequencies of the neurons are loaded !")
@@ -35,7 +38,7 @@ class sequential_ablation(object):
 	@torch.no_grad()
 	def seq_abl(self, sample_idx : list, layer_idx : list, rate = '30', under = True):
 
-		assert len(sample_idx) <= self.batch_size, "len(sample_idx) is lower than batch_size"
+		assert len(sample_idx) <= self.batch_size, "len(sample_idx) should be lower than batch_size"
 
 		if under:
 			r_indice = [index[rate] for index in self.r_indices_.values()]
@@ -51,7 +54,7 @@ class sequential_ablation(object):
 
 				o = o.view(o.size(0), -1) if self.model == 'pggan' else o[0].view(o[0].size(0), -1)
 
-				# for heatmap
+				# for mask
 				mask = o[:,index].detach().cpu() > 0
 				idx_expand = torch.tensor(index).expand(len(sample_idx),-1)
 				act_idx.append(idx_expand[mask])
@@ -72,6 +75,7 @@ class sequential_ablation(object):
 
 		original_image = self.G(self.latents[sample_idx].to(self.device))['image'].detach().cpu()
 
+		# for masking what neurons are turned off.
 		mask_idx = []
 
 		for sample in range(len(sample_idx)):
@@ -131,6 +135,7 @@ class sequential_ablation(object):
 		normal = sorted_index[:topn]
 		artifact = sorted_index[-topn:]
 
+		# for plotting images
 		normal_img = self.generate_images(z[normal])
 		artifact_img = self.generate_images(z[artifact])
 
