@@ -90,4 +90,5 @@ Use the 'notebook.ipynb' file.__*
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/correction.png?raw=true)
 
 
-
+## LICENSE
+MIT LICENSE
