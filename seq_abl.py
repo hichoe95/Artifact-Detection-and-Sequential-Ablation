@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import tqdm
 
 class sequential_ablation(object):
-	def __init__(self, G, device, args):
+	def __init__(self, G : nn.Module, device, args):
 
 		self.G = G
 		self.device = device
