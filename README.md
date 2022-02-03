@@ -39,7 +39,7 @@ For following implementation, download **StyleGAN2 FFHQ** weights in current dir
 ## Implementation
 
 - **Options**
-```sh
+```
 optional arguments:
   -h, --help                show this help message and exit
   --gpu GPU                 gpu index numper
@@ -63,7 +63,7 @@ optional arguments:
 ```
 
 - **Usage**
-```sh
+```
 python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./stats \
                --model stylegan2 --dataset ffhq --resolution 1024 --weight_path ./ \
                --detection True --correction True      
