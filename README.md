@@ -90,7 +90,7 @@ Use the 'notebook.ipynb' file.__*
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/correction.png?raw=true)
 
 ## Citation
-```sh
+```
 @misc{choi2022neurons,
       title={Can We Find Neurons that Cause Unrealistic Images in Deep Generative Networks?}, 
       author={Hwanil Choi and Wonjoon Chang and Jaesik Choi},
