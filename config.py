@@ -6,7 +6,7 @@ def parse_args(jupyter = False):
 	parser = argparse.ArgumentParser()
 	
 	# setting
-	parser.add_argument("--gpu", type = int, default = 0, help = "gpu index numper")
+	parser.add_argument("--gpu", type = int, default = 0, help = "gpu index number")
 	parser.add_argument("--batch_size", type = int, default = 30, help = "batch size for pre processing and generating process")
 	parser.add_argument("--sample_size", type = int, default = 30000, help = "sample size for statistics")
 	parser.add_argument("--freq_path", type = str, default = "./stats", help = "loading saved frequencies of neurons")
