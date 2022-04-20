@@ -1,7 +1,7 @@
 # Can We Find Neurons that Cause Unrealistic Images in Deep Generative Networks?
 ### Artifact Detection/Correction - Offcial PyTorch Implementation
 
-***** This paper is accepted at IJCAI-2022 !! 
+***** Our paper is accepted at IJCAI-2022 !! 
 
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/Screen%20Shot%202022-01-18%20at%202.48.49%20PM.png?raw=true)
 
