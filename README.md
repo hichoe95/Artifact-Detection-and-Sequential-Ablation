@@ -45,7 +45,7 @@ For following implementation, download **StyleGAN2 FFHQ** weights in current dir
 ```
 optional arguments:
   -h, --help                show this help message and exit
-  --gpu GPU                 gpu index numper
+  --gpu GPU                 gpu index number
   --batch_size BATCH_SIZE
                             batch size for pre processing and generating process
   --sample_size SAMPLE_SIZE
