@@ -1,5 +1,4 @@
-# Can We Find Neurons that Cause Unrealistic Images in Deep Generative Networks?
-*** Our paper is accepted at IJCAI-2022 !! 
+# Can We Find Neurons that Cause Unrealistic Images in Deep Generative Networks?(IJCAI-2022)
 
 ### Artifact Detection/Correction - Official PyTorch Implementation
 
