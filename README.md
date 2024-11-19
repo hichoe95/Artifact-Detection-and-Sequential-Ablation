@@ -79,7 +79,7 @@ python main.py --gpu 0 --batch_size 30 --sample_size 30000 --freq_pth ./stats \
 Use the 'notebook.ipynb' file.__*
 
 
-## Detection results for 50K samples
+## Detection results from 50K samples
 
 ### Bottom 60 images
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/norm.png?raw=true)
@@ -87,7 +87,7 @@ Use the 'notebook.ipynb' file.__*
 ### Top 60 images
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/arti.png?raw=true)
 
-## Correction results & Masking part of artifact
+## Correction results & artifact mask
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/masks.png?raw=true)
 ![](https://github.com/hichoe95/Artifact-Detection-and-Sequential-Ablation/blob/main/figure/correction.png?raw=true)
 
